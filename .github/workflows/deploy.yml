@@ -3,7 +3,7 @@ name: CI/CD for Woof Mates
 on:
   push:
     branches:
-      - DEV
+      - main
 
 jobs:
   build:
