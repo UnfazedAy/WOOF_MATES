@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     
     env:  # Define the environment variables used in the workflow
-      SQLALCHEMY_DATABASE_URL: ${{ secrets.SQLALCHEMY_DATABASE_UR }}
+      SQLALCHEMY_DATABASE_URL: ${{ secrets.SQLALCHEMY_DATABASE_URL }}
       CLOUDINARY_CLOUD_NAME: ${{ secrets.CLOUDINARY_CLOUD_NAME }}
       CLOUDINARY_API_KEY: ${{ secrets.CLOUDINARY_API_KEY }}
       CLOUDINARY_API_SECRET_KEY: ${{ secrets.CLOUDINARY_API_SECRET_KEY }}
