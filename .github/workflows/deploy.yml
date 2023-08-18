@@ -51,3 +51,4 @@ jobs:
     - name: Print App Logs
       run: |
         cat app.log
+        echo  "Done"
