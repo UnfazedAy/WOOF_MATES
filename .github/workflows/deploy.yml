@@ -33,6 +33,16 @@ jobs:
       
     - name: Run FastAPI app
       run: nohup python backend/main.py > app.log 2>&1 &
+    
+    - name: Check FastAPI App Exit Status
+      run: |
+        sleep 7  # Wait for the app to start
+        if ps aux | grep 'backend/main.py' | grep -v grep > /dev/null; then
+          echo "FastAPI app is running."
+        else
+          echo "Error: FastAPI app failed to start!"
+          exit 1
+        fi
 
     - name: Print Success Message
       run: |
